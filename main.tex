@@ -1,0 +1,168 @@
+\documentclass[12pt]{article}
+
+% ===== Shared settings =====
+\usepackage[letterpaper,margin=0.7in]{geometry}
+\renewcommand\normalsize{%
+  \fontsize{13}{15}\selectfont
+}
+\usepackage{parskip,microtype,booktabs,enumitem,graphicx}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{titlesec}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[sfdefault]{carlito}
+\else
+  \usepackage{fontspec}
+  \setmainfont{Georgia}
+\fi
+\usepackage{fancyhdr,lastpage}
+\usepackage{hyperref}
+\hypersetup{colorlinks=false,pdfborder={0 0 0}}
+
+% ===== Colors =====
+\definecolor{DeepBlue}{RGB}{0,40,90}
+\definecolor{AccentGray}{gray}{0.25}
+
+% ===== Headings =====
+\titleformat{\section}{\Large\bfseries\color{DeepBlue}\raggedright}{}{0pt}{}
+\titleformat{\subsection}{\normalsize\bfseries\color{DeepBlue}}{}{0pt}{}
+\titlespacing*{\section}{0pt}{1.0em plus 0.2em minus 0.2em}{0.6em}
+\titlespacing*{\subsection}{0pt}{0.8em plus 0.1em minus 0.1em}{0.4em}
+
+% ===== Header/Footer and Metadata Macros =====
+\newcommand{\CourseInfo}[2]{%
+  \fancyhead[L]{\textbf{#1}}%
+  \fancyhead[R]{\textbf{#2}}%
+}
+
+\newcommand{\StudyTitle}[1]{%
+  {\LARGE\bfseries\color{DeepBlue} #1}\par\vspace{0.4em}\hrule\vspace{1em}
+}
+
+% ===== Footer =====
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\textcolor{DeepBlue}{BIO 150 · Measurement, Scale, and Microscopy · Page \thepage\ of \pageref{LastPage}}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% ===== Document Info =====
+\CourseInfo{BIO 150 – Principles of Biology}{Lecture Recap Tues. Feb. 3, 2026}
+
+\begin{document}
+
+\StudyTitle{Lecture Recap — Measurement, Scale, and Microscopy}
+
+This class period focused on building intuition for biological scale, practicing metric (SI) unit conversions, and introducing microscopy as a tool for visualizing cells. The emphasis was not speed, but confidence and accuracy when moving between units and understanding why scale matters in biology.
+
+
+\section*{Metric System and SI Units}
+
+Biology uses the International System of Units (SI), which is organized by powers of ten. Most conversions involve moving the decimal point in steps of three (factors of one thousand).
+
+\begin{itemize}
+  \item Large to small units: move the decimal to the right
+  \item Small to large units: move the decimal to the left
+  \item Common biology units include meters (m), millimeters (mm), micrometers ($\mu$m), and nanometers (nm)
+\end{itemize}
+
+\textbf{Centimeters and deciliters are common trouble spots} because they represent single decimal steps rather than thousand-fold changes. Most measurements we cover bypass these units entirely.
+
+\section*{Thinking About Scale}
+
+Students were asked to connect units to physical reference points:
+
+\begin{itemize}
+  \item A meter is approximately the length of a meter stick
+  \item A kilometer is roughly comparable to a mile
+  \item A millimeter is visible as a small mark on a ruler
+  \item A micrometer and nanometer are far below unaided human vision
+\end{itemize}
+
+Developing intuition for scale is essential for understanding:
+
+\begin{itemize}
+  \item Cell size
+  \item The limits of microscopy
+  \item Diffusion
+  \item Why cells cannot be arbitrarily large
+\end{itemize}
+
+\section*{Scientific Notation and Unit Accuracy}
+
+Scientific notation is a compact way to represent very large or very small numbers and is commonly used in biology. Accuracy matters more than speed.
+
+\textbf{Units must always be included with numerical answers.} A correct number without units is incomplete.
+
+A real-world example discussed involved medical dosing: expressing quantities in appropriate units (such as milligrams rather than fractions of grams) reduces the risk of serious error.
+
+\section*{Introduction to Microscopy}
+
+A brief microscope demonstration introduced how microscopes allow visualization of structures too small to be seen with the naked eye.
+
+Key concepts included:
+
+\begin{itemize}
+  \item Cells and tissues are three-dimensional, not flat
+  \item Different structures come into focus at different depths (focal planes)
+  \item Fine focus adjustments reveal details layer by layer
+  \item Light intensity and condenser settings affect image clarity
+\end{itemize}
+
+Layered threads were used to demonstrate how focus changes with depth—an important concept when viewing real cells.
+
+\section*{Historical Context: Discovery of Cells}
+
+Early microscopy discoveries were reviewed:
+
+\begin{itemize}
+  \item Antonie van Leeuwenhoek observed living microorganisms
+  \item Robert Hooke first described and named cells while examining cork
+  \item Matthias Schleiden and Theodor Schwann concluded that plants and animals are composed of cells
+\end{itemize}
+
+These discoveries led to the development of cell theory.
+
+\section*{Cell Theory and Limits on Cell Size}
+
+Three core ideas of cell theory were emphasized:
+
+\begin{enumerate}
+  \item All living organisms are composed of one or more cells
+  \item The cell is the basic unit of life
+  \item All cells arise from pre-existing cells
+\end{enumerate}
+
+Cell size is limited by physical constraints:
+
+\begin{itemize}
+  \item Materials must enter and exit through the plasma membrane
+  \item Diffusion depends on surface area, distance, and concentration gradients
+  \item As cell size increases, volume increases faster than surface area
+\end{itemize}
+
+Some cells overcome these limits by being long and thin (for example, neurons), which reduces diffusion distance.
+\newpage
+\section*{Types of Microscopes}
+
+Several microscopy approaches were briefly introduced:
+
+\begin{itemize}
+  \item Light microscopes use visible light and are limited by wavelength
+  \item Electron microscopes offer much higher resolution but require non-living samples
+  \item Specialized light techniques (phase contrast, fluorescence, confocal) improve contrast and resolution
+\end{itemize}
+
+Each method involves tradeoffs between resolution, sample preparation, and the ability to observe living cells.
+
+\section*{Key Takeaways}
+
+\begin{itemize}
+  \item Biology depends on understanding scale and measurement
+  \item Most metric conversions occur in factors of one thousand
+  \item Accuracy and units matter more than speed
+  \item Microscopes exist because cells are too small to see unaided
+  \item Cell size is constrained by diffusion and surface-area-to-volume relationships
+\end{itemize}
+
+\end{document}
